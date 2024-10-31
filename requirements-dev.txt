@@ -1,0 +1,9 @@
+build
+isort
+flake8
+mypt
+pydocstyle
+pytest
+pytest-cov
+ruff
+tox
