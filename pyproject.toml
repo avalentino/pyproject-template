@@ -90,7 +90,7 @@ line_length = 79
 
 [tool.pydocstyle]
 add-ignore = "D105"
-# add-ignore = "D105", "D107"
+# add-ignore = ["D105", "D107"]
 
 
 [tool.mypy]
@@ -167,7 +167,7 @@ select = [
     "PERF",     # PERF  Perflint
     # "FURB",     # FURB  refurb                # --preview
     # "DOC",      # DOC   pydoclint
-    "RUF",  # RUF Ruff-specific rules
+    "RUF",      # RUF   Ruff-specific rules
 ]
 extend-ignore = [
     "D105",     # D105 Missing docstring in magic method
