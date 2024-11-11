@@ -14,8 +14,8 @@ extend-select = W504,B950
 # D107: undocumented-public-init
 # extend-ignore = E203,W503,D105,D107  # D* are in pyproject.toml
 per-file-ignores =
-    tests/*: D
-    */tests/*: D
+    tests/*: D,T003
+    */tests/*: D,T003
 statistics = True
 count = True
 # extend-exclude = packagename/subpackage/*
