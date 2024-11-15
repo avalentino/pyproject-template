@@ -36,6 +36,7 @@ repos:
 #     rev: 6.3.0
 #     hooks:
 #     -   id: pydocstyle
+#         exclude: tests|examples|data|docs
 
 # -   repo: https://github.com/pycqa/isort
 #     rev: 5.13.2
