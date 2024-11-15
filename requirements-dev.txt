@@ -1,9 +1,13 @@
-build
 isort
 flake8
-mypt
+mypy
 pydocstyle
 pytest
 pytest-cov
+python-build
 ruff
-tox
+sphinx
+sphinx_rtd_theme
+sphinxcontrib-spelling
+tox >= 4
+twine
