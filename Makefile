@@ -38,7 +38,7 @@ fullcheck:
 	$(PYTHON) -m tox run
 
 coverage:
-	$(PYTHON) -m pytest --cov=$(TARGET) --cov-report=html --cov-report=term
+	$(PYTHON) -m pytest --doctest-modules --cov=$(TARGET) --cov-report=html --cov-report=term
 
 lint:
 	$(PYTHON) -m flake8 --count --statistics $(TARGET) tests
