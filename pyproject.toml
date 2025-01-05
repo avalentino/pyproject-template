@@ -68,6 +68,11 @@ version = {attr = "packagename.__version__"}
 mypkg1 = ["data1.rst"]
 
 
+[tool.cibuildwheel]
+test-requires = "pytest"
+skip = "pp* cp38-* cp39-*"
+
+
 [tool.pytest.ini_options]
 addopts = "--ignore=examples/"
 

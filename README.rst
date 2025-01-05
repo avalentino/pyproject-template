@@ -4,7 +4,7 @@ ${packagename}
 
 .. badges
 
-|PyPI Status| |GHA Status| |Documentation Status|
+|PyPI Status| |GHA Status| |Documentation Status| |Python Versions| |License|
 
 .. |PyPI Status| image:: https://img.shields.io/pypi/v/${packagename}.svg
     :target: https://pypi.org/project/${packagename}
@@ -15,6 +15,12 @@ ${packagename}
 .. |Documentation Status| image:: https://readthedocs.org/projects/${packagename}/badge/?version=latest
     :target: https://${packagename}.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
+.. |Python Versions| image:: https://img.shields.io/pypi/pyversions/${packagename}
+    :target: https://pypi.org/project/${packagename}
+    :alt: Supported Python versions
+.. |License| image:: https://img.shields.io/pypi/l/${packagename}
+    :target: https://pypi.org/project/${packagename}
+    :alt: License
 
 .. description
 
@@ -58,7 +64,7 @@ It is recommended to use the pytest_ tool to run the tests::
 License
 -------
 
-:copyright: 2024 Antonio Valentino
+:copyright: 2025 Antonio Valentino
 
 The ``${packagename}`` package is distributed under the ${license_name} License
 (see the `LICENSE` file).
