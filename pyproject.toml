@@ -96,7 +96,7 @@ line_length = 79
 [tool.pydocstyle]
 add-ignore = ["D105"]
 # add-ignore = ["D105", "D107"]
-match="(?!(test_|_s1utils|conf)).*\.py"
+match='(?!(test_|conf)).*\.py'
 
 
 [tool.mypy]
