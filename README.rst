@@ -12,8 +12,8 @@ ${packagename}
 .. |GHA Status| image:: https://github.com/${organization}/${packagename}/actions/workflows/ci.yml/badge.svg
     :target: https://github.com/${organization}/${packagename}/actions
     :alt: GitHub Actions Status
-.. |Documentation Status| image:: https://readthedocs.org/projects/${packagename}/badge/?version=latest
-    :target: https://${packagename}.readthedocs.io/en/latest/?badge=latest
+.. |Documentation Status| image:: https://readthedocs.org/projects/${packagename}/badge
+    :target: https://${packagename}.readthedocs.io
     :alt: Documentation Status
 .. |Python Versions| image:: https://img.shields.io/pypi/pyversions/${packagename}
     :target: https://pypi.org/project/${packagename}
