@@ -49,8 +49,10 @@ clean:
 
 cleaner: clean
 	$(RM) -r .coverage htmlcov
-	$(RM) -r .pytest_cache .tox
-	$(RM) -r .mypy_cache .ruff_cache
+	$(RM) -r .pytest_cache
+	$(RM) -r .tox
+	$(RM) -r .mypy_cache
+	$(RM) -r .ruff_cache
 	$(RM) -r .ipynb_checkpoints
 
 distclean: cleaner
@@ -64,19 +66,19 @@ lint:
 	$(PYTHON) -m mypy --check-untyped-defs --ignore-missing-imports $(TARGET)
 	# ruff check $(TARGET) tests
 
+docs:
+	mkdir -p docs/_static
+	$(MAKE) -C docs html
+
 api:
 	$(RM) -r docs/api
 	$(SPHINX_APIDOC) --module-first --separate --no-toc -o docs/api \
 	  --doc-project "$(TARGET) API" --templatedir docs/_templates/apidoc \
 	  $(TARGET) $(TARGET)/tests
 
-docs:
-	mkdir -p docs/_static
-	$(MAKE) -C docs html
-
 ext:
 	$(PYTHON) setup.py build_ext --inplace
 
 wheels:
 	# Requires docker
-	cibuildwheel --platform
+	python3 -m cibuildwheel --platform auto
