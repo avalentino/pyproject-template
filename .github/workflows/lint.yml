@@ -30,7 +30,7 @@ jobs:
         shell: bash
         run: |
           python -m pip install --upgrade pip
-          python -m pip install flake8 isort black mypy ruff
+          python -m pip install flake8 isort black mypy ruff  # pydocstyle
           if [ -f requirements-lint.txt ]; then pip install -r requirements-lint.txt; fi
 
       - name: Lint (flake8)
@@ -52,3 +52,9 @@ jobs:
       - name: Lint (ruff)
         run: |
           ruff check ${PACKAGE}
+
+      # - name: Lint (pydocstyle)
+      #   run: |
+      #     python -m pydocstyle --count ${PACKAGE}
+
+
