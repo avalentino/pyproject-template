@@ -31,13 +31,13 @@ dist:
 	$(PYTHON) -m twine check dist/*.tar.gz dist/*.whl
 
 check:
-	$(PYTHON) -m pytest --doctest-modules $(TARGET)
+	$(PYTHON) -m pytest --doctest-modules $(TARGET) tests
 
 fullcheck:
 	$(PYTHON) -m tox run
 
 coverage:
-	$(PYTHON) -m pytest --doctest-modules --cov=$(TARGET) --cov-report=html --cov-report=term
+	$(PYTHON) -m pytest --doctest-modules --cov=$(TARGET) --cov-report=html --cov-report=term $(TARGET) tests
 
 clean:
 	$(RM) -r *.*-info build

@@ -124,7 +124,7 @@ select = [
     "UP",       # UP    pyupgrade
     "YTT",      # YTT   flake8-2020
     # "ANN",      # ANN   flake8-annotations
-    # "ASYNC",    # ANYNC flake8-async
+    # "ASYNC",    # ASYNC flake8-async
     # "S",        # S     flake8-bandit         # TODO
     "BLE",      # BLE   flake8-blind-except
     "FBT",      # FBT   flake8-boolean-trap

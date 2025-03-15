@@ -55,7 +55,7 @@ Testing
 stbx includes a quite complete test suite.
 It is recommended to use the pytest_ tool to run the tests::
 
-  $ python3 -m pytest ${packagename}
+  $ python3 -m pytest ${packagename} tests
 
 
 .. _pytest: https://docs.pytest.org

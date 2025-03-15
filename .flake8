@@ -15,6 +15,7 @@ extend-select = W504,B950
 per-file-ignores =
     tests/*: D,T003
     */tests/*: D,T003
+    pkg/cli.py: NQA102
 statistics = True
 count = True
 # extend-exclude = packagename/subpackage/*
