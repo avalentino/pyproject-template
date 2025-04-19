@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61.0.0"]
+requires = ["setuptools>=77.0.0"]
 build-backend = "setuptools.build_meta"
 
 
@@ -12,13 +12,11 @@ description = "long description"
 readme = {file = "README.rst", content-type = "text/x-rst"}
 requires-python = ">=3.9"
 keywords = ["kw1", "kw2"]
-license = {text = "MIT"}
-# license = {text = "Apache-2.0"}
+license = "MIT"
+license-files = ["LICEN[CS]E*", "AUTHORS.rst"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Science/Research",
-    # "License :: OSI Approved :: Apache Software License",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
@@ -69,8 +67,9 @@ mypkg1 = ["data1.rst"]
 
 
 [tool.cibuildwheel]
+skip = "pp*"
 test-requires = "pytest"
-skip = "pp* cp38-* cp39-*"
+test-command = "pytest -v {project}/tests"
 
 
 [tool.pytest.ini_options]
@@ -90,6 +89,7 @@ no_inline_sort = true
 include_trailing_comma = true
 use_parentheses = true
 line_length = 79
+known_first_party = ["my_module1", "my_module2"]
 # skip_glob = ["packagename/parse/*"]
 
 
