@@ -23,7 +23,7 @@ help:
 	@echo "  lint      - perform check with code linter (flake8, black)"
 	@echo "  docs      - generate the sphinx documentation"
 	@echo "  api       - update the API source files in the documentation"
-	@echo "  ext       - build Python extensions inplace"
+	@echo "  ext       - build Python extensions in-place"
 	@echo "  wheels    - build Python wheels"
 
 dist:
@@ -69,6 +69,8 @@ lint:
 docs:
 	mkdir -p docs/_static
 	$(MAKE) -C docs html
+	$(MAKE) -C docs linkcheck
+	$(MAKE) -C docs spelling
 
 api:
 	$(RM) -r docs/api
