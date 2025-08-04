@@ -11,11 +11,27 @@ import sys
 sys.path.insert(0, os.path.abspath(".."))
 
 
+# -- Version utils -----------------------------------------------------------
+
+def _get_version(filename):
+    import re
+
+    with open(filename) as fd:
+        data = fd.read()
+
+    mobj = re.search(
+        r"""^__version__\s*=\s*(?P<quote>['"])(?P<version>.*)(?P=quote)""",
+        data,
+        re.MULTILINE,
+    )
+    return mobj.group("version")
+
+
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "${packagename}"
-copyright = "2020-2025, Antonio Valentino"  # noqa: D100
+copyright = "2020-2025, Antonio Valentino"  # noqa: A001
 author = "Antonio Valentino"
 
 # The full version, including alpha/beta/rc tags

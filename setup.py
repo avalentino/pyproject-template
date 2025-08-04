@@ -1,8 +1,7 @@
 """Setup script for packagename."""
 
-import setuptools
 import numpy as np
-
+import setuptools
 
 extensions = [
     setuptools.Extension(

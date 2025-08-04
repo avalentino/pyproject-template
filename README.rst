@@ -31,11 +31,13 @@ Download
 --------
 
 The ``${packagename}`` source code can be downloaded from the Git_
-repository on GitHub_: https://github.com/${organization}/${packagename}.
+repository on GitHub_: https://github.com/${organization}/${packagename}
+or from PyPI_: https://pypi.org/project/${packagename}.
 
 
 .. _Git: https://git-scm.com
 .. _GitHub: https://github.com
+.. _PyPI: https://pypi.org
 
 
 Installation
@@ -52,7 +54,7 @@ The pip_ tool can be used to install the package::
 Testing
 -------
 
-stbx includes a quite complete test suite.
+${packagename} includes a quite complete test suite.
 It is recommended to use the pytest_ tool to run the tests::
 
   $ python3 -m pytest ${packagename} tests
@@ -64,7 +66,7 @@ It is recommended to use the pytest_ tool to run the tests::
 License
 -------
 
-:copyright: 2025 Antonio Valentino
+:copyright: 2025, Antonio Valentino
 
 The ``${packagename}`` package is distributed under the ${license_name} License
 (see the `LICENSE` file).
