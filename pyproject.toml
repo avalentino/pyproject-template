@@ -73,8 +73,8 @@ test-command = "pytest -v {project}/tests"
 
 
 [tool.pytest.ini_options]
-addopts = "--ignore=examples/"
 addopts = [
+    "--ignore=examples/",
     "--import-mode=importlib",
 ]
 
@@ -107,6 +107,7 @@ known_first_party = ["my_module1", "my_module2"]
 
 
 [tool.pydocstyle]
+convention = "numpy"
 add-ignore = ["D105"]
 # add-ignore = ["D105", "D107"]
 match='(?!(test_|conf)).*\.py'
@@ -120,7 +121,7 @@ ignore-words-list = "nd"
 
 
 [tool.mypy]
-plugins = ["numpy.typing.mypy_plugin"]
+# plugins = ["numpy.typing.mypy_plugin"]. # deprecated
 
 
 [tool.ruff]
@@ -199,7 +200,7 @@ select = [
 ]
 extend-ignore = [
     "D105",     # D105 Missing docstring in magic method
-    # "D107",     # D107 Missing docstring in `__init__`
+    "D107",     # D107 Missing docstring in `__init__`
     "D203",     # D203 1 blank line required before class docstring
     "D213",     # D213 Multi-line docstring summary should start at the second line
     "ISC001",   # ISC001 Implicitly concatenated string literals on one line
@@ -228,3 +229,6 @@ length-sort = true
 
 [tool.ruff.lint.flake8-import-conventions.extend-aliases]
 "xml.etree.ElementTree" = "etree"
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"  # Accepts: "google", "numpy", or "pep257".
