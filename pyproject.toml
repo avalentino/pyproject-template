@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=77.0.0"]
+requires = ["setuptools>=77.0.3"]
 build-backend = "setuptools.build_meta"
 
 
@@ -10,7 +10,7 @@ authors = [
 ]
 description = "long description"
 readme = {file = "README.rst", content-type = "text/x-rst"}
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 keywords = ["kw1", "kw2"]
 license = "MIT"
 license-files = ["LICEN[CS]E*", "AUTHORS.rst"]
@@ -77,6 +77,13 @@ addopts = [
     "--ignore=examples/",
     "--import-mode=importlib",
 ]
+markers = [
+    # "webtest: mark a test as a webtest.",
+    # builtin markers
+    # "slow: mark test as slow to run.",
+    # "remote_data: Apply to tests that require data from remote servers.",
+    # "hugemem: mark test as using a lot of memory.",
+]
 
 
 [tool.black]
@@ -121,13 +128,17 @@ ignore-words-list = "nd"
 
 
 [tool.mypy]
-# plugins = ["numpy.typing.mypy_plugin"]. # deprecated
+exclude = [
+    "^docs/conf\\.py$",
+    # "two\.pyi$",      # files ending with "two.pyi"
+    # "^three\.",       # files starting with "three."
+]
 
 
 [tool.ruff]
 line-length = 79
 # indent-width = 4
-# target-version = "py39"
+# target-version = "py310"
 extend-exclude = ["docs/conf.py"]
 
 
@@ -229,6 +240,7 @@ length-sort = true
 
 [tool.ruff.lint.flake8-import-conventions.extend-aliases]
 "xml.etree.ElementTree" = "etree"
+
 
 [tool.ruff.lint.pydocstyle]
 convention = "numpy"  # Accepts: "google", "numpy", or "pep257".
