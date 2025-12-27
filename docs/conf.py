@@ -13,6 +13,7 @@ sys.path.insert(0, os.path.abspath(".."))
 
 # -- Version utils -----------------------------------------------------------
 
+
 def _get_version(filename):
     import re
 
@@ -35,9 +36,10 @@ copyright = "2020-2025, Antonio Valentino"  # noqa: A001
 author = "Antonio Valentino"
 
 # The full version, including alpha/beta/rc tags
-import bpack
+# import bpack
 
-release = bpack.__version__
+# release = bpack.__version__
+release = _get_version("packagename/__init__.py")
 
 master_doc = "index"
 
@@ -106,7 +108,7 @@ latex_documents = [
     (
         project,
         project + ".tex",
-        "Title",
+        f"{project} Documentation",
         author,
         "manual",
         False,
@@ -157,7 +159,10 @@ intersphinx_mapping = {
 # -- Options for extlinks extension ------------------------------------------
 
 extlinks = {
-    "issue": ("https://github.com/${organization}/${packagename}/issues/%s", "gh-%s"),
+    "issue": (
+        "https://github.com/${organization}/${packagename}/issues/%s",
+        "gh-%s",
+    ),
 }
 
 
