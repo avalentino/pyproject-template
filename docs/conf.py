@@ -32,7 +32,7 @@ def _get_version(filename):
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "${packagename}"
-copyright = "2020-2025, Antonio Valentino"  # noqa: A001
+copyright = "2020-2026, Antonio Valentino"  # noqa: A001
 author = "Antonio Valentino"
 
 # The full version, including alpha/beta/rc tags

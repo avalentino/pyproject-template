@@ -66,7 +66,7 @@ It is recommended to use the pytest_ tool to run the tests::
 License
 -------
 
-:copyright: 2025, Antonio Valentino
+:copyright: 2026, Antonio Valentino
 
 The ``${packagename}`` package is distributed under the ${license_name} License
 (see the `LICENSE` file).
