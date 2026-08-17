@@ -77,20 +77,21 @@ dev = [
 packages = ["packagename", "packagename.tests"]
 # py-modules = ["modulename"]
 # zip-safe = true
-# license-files = ["LICENSE"]
-
-
-# [tool.setuptools.packages]
-# find = {namespaces = false}
 
 
 [tool.setuptools.dynamic]
 version = {attr = "packagename.__version__"}
 
 
+# [tool.setuptools.packages.find]
+# include = ["pkg*"]
+# namespaces = false
+
+
 [tool.setuptools.package-data]
 "*" = ["*.txt"]
 mypkg1 = ["data1.rst"]
+mypkg2 = ["py.typed", "*.pyi"]
 
 
 [tool.cibuildwheel]
@@ -119,7 +120,6 @@ line-length = 79
 preview = true
 enable-unstable-feature = [
     "hug_parens_with_braces_and_square_brackets",
-    "multiline_string_handling",
     "string_processing",
     "wrap_long_dict_values_in_parens",
 ]
@@ -149,10 +149,11 @@ match='(?!(test_|conf)).*\.py'
 
 
 [tool.codespell]
-skip = "*.pdf,*.pp,*.ipynb,./docs/spelling_wordlist.txt"
+skip = "*.pdf,*.pp,*.ipynb,./docs/spelling_wordlist.txt,./extern,./docs/_build,./htmlcov/"
 count = true
 quiet-level = 3
-ignore-words-list = "nd"
+# ignore-words-list = "aaa,bbb"
+# ignore-words="docs/spelling_wordlist.txt"
 
 
 [tool.mypy]
@@ -264,6 +265,7 @@ docstring-code-format = true
 
 [tool.ruff.lint.isort]
 length-sort = true
+known-first-party = ["pkg"]
 
 
 [tool.ruff.lint.flake8-import-conventions.extend-aliases]
