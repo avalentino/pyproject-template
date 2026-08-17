@@ -149,11 +149,18 @@ match='(?!(test_|conf)).*\.py'
 
 
 [tool.codespell]
-skip = "*.pdf,*.pp,*.ipynb,./docs/spelling_wordlist.txt,./extern,./docs/_build,./htmlcov/"
 count = true
 quiet-level = 3
-# ignore-words-list = "aaa,bbb"
+skip = [
+    "./docs/_build",
+    "./htmlcov/",
+    "*.pdf",
+]
 # ignore-words="docs/spelling_wordlist.txt"
+# ignore-words-list = [
+#     "aaa",
+#     "bbb",
+# ]
 
 
 [tool.mypy]

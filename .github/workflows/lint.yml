@@ -63,3 +63,8 @@ jobs:
         run: |
           ruff --version
           ruff check ${PACKAGE}
+
+      - name: Lint (codespell)
+        run: |
+          codespell --version
+          codespell --count ${PACKAGE} tests
