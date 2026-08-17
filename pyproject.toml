@@ -20,6 +20,7 @@ classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Free Threading :: 2 - Beta",
     "Topic :: Scientific/Engineering",
     "Topic :: Utilities",
 ]
@@ -68,6 +69,7 @@ mypkg1 = ["data1.rst"]
 
 [tool.cibuildwheel]
 skip = "pp*"
+enable = ["cpython-freethreading"]
 test-requires = "pytest"
 test-command = "pytest -v {project}/tests"
 
