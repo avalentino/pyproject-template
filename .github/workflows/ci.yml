@@ -90,7 +90,6 @@ jobs:
         shell: bash
         run: |
           python -m pip install --group coverage
-          # if [ -f requirements-test.txt ]; then pip install -r requirements-test.txt; fi
 
       - name: Test
         # working-directory: dist

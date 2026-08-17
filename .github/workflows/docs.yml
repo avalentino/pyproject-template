@@ -31,8 +31,6 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install --group docs
           python -m pip install .[all]
-          # if [ -f requirements-docs.txt ]; then python -m pip install -r requirements-docs.txt; fi
-          # if [ -f docs/requirements-docs.txt ]; then python -m pip install -r docs/requirements-docs.txt; fi
 
       - name: Build docs
         run: |
