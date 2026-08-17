@@ -47,6 +47,32 @@ Changelog = "https://github.com/avalentino/packagename/blob/main/docs/release_no
 Issues = "https://github.com/avalentino/packagename/issues"
 
 
+[dependency-groups]
+docs = [
+    "sphinx",
+    "sphinx_rtd_theme",
+    "sphinxcontrib-spelling",
+    "packaging",
+    "ipython",
+]
+test = ["pytest", "packaging"]
+coverage = ["pytest-cov", "coverage[toml]", {include-group = "test"}]
+lint = ["flake8", "pydocstyle", "isort", "black", "ruff", "mypy", "codespell"]
+dev = [
+    "python-build",
+    "twine",
+    "setuptools >=77",
+    "packaging",
+    "cython >=3",
+    "numpy >=2",
+    "tox",
+    {include-group = "docs"},
+    {include-group = "test"},
+    {include-group = "coverage"},
+    {include-group = "lint"},
+]
+
+
 [tool.setuptools]
 packages = ["packagename", "packagename.tests"]
 # py-modules = ["modulename"]
