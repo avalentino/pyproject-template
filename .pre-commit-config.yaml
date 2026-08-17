@@ -18,7 +18,7 @@ repos:
     rev: v0.16.3
     hooks:
     -   id: ruff
-        args: [--fix]
+        args: [--fix]  # , --config=pyproject.toml
     -   id: ruff-format
 
 -   repo: https://github.com/asottile/pyupgrade
@@ -41,7 +41,7 @@ repos:
     rev: 6.3.0
     hooks:
     -   id: pydocstyle
-        exclude: tests|examples|data|docs
+        exclude: tests|examples|data|docs|setup.py
 
 -   repo: https://github.com/pycqa/isort
     rev: 9.0.0b5
@@ -80,7 +80,7 @@ repos:
     hooks:
     -   id: codespell
         additional_dependencies: [tomli]
-        exclude: |
-            (?x)^(
-                docs/spelling_wordlist.txt
-            )
+        # exclude: |
+        #     (?x)^(
+        #         docs/spelling_wordlist.txt
+        #     )
