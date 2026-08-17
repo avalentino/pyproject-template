@@ -180,8 +180,9 @@ extend-exclude = ["docs/conf.py"]
 
 [tool.ruff.lint]
 preview = true
-select = [
-    # ruff --version  # ruff 0.11.6
+extend-select = [
+    # ruff --version  # ruff 0.16.3
+    # ruff linter
     "E",        #  E/W pycodestyle
     "W",        #  E/W pycodestyle
     "F",        #    F Pyflakes
