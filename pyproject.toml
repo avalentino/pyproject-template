@@ -10,7 +10,7 @@ authors = [
 ]
 description = "long description"
 readme = {file = "README.rst", content-type = "text/x-rst"}
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 keywords = ["kw1", "kw2"]
 license = "MIT"
 license-files = ["LICEN[CS]E*", "AUTHORS.rst"]
@@ -138,7 +138,7 @@ exclude = [
 [tool.ruff]
 line-length = 79
 # indent-width = 4
-# target-version = "py310"
+# target-version = "py311"
 extend-exclude = ["docs/conf.py"]
 
 
