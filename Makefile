@@ -71,6 +71,7 @@ lint:
 docs:
 	mkdir -p docs/_static
 	$(MAKE) -C docs html
+	$(MAKE) -C docs doctest
 	$(MAKE) -C docs linkcheck
 	$(MAKE) -C docs spelling
 
