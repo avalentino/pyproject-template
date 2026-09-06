@@ -15,7 +15,7 @@ repos:
     -   id: detect-private-key
 
 -   repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.16.3
+    rev: v0.16.6
     hooks:
     -   id: ruff
         args: [--fix]  # , --config=pyproject.toml
@@ -44,7 +44,7 @@ repos:
         exclude: tests|examples|data|docs|setup.py
 
 -   repo: https://github.com/pycqa/isort
-    rev: 9.0.0b5
+    rev: 9.0.1
     hooks:
     -   id: isort
         name: isort (python)
@@ -84,3 +84,9 @@ repos:
         #     (?x)^(
         #         docs/spelling_wordlist.txt
         #     )
+
+# -   repo: https://github.com/MarcoGorelli/cython-lint
+#     rev: v0.21.0
+#     hooks:
+#     -   id: cython-lint
+#     -   id: double-quote-cython-strings
