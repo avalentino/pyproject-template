@@ -124,7 +124,7 @@ enable-unstable-feature = [
     "wrap_long_dict_values_in_parens",
 ]
 # target-version = ['py311']
-# extend-exclude = "packagename/parse/*"
+# extend-exclude = "(^/c-blosc|^/hdf5-blosc|^/hdf5-blosc2)"
 
 
 [tool.isort]
@@ -145,7 +145,8 @@ known_first_party = ["my_module1", "my_module2"]
 convention = "numpy"
 add-ignore = ["D105"]
 # add-ignore = ["D105", "D107"]
-match='(?!(test_|conf)).*\.py'
+match="(?!(test_|conf)).*\\.py"
+match-dir="(?!(tests|doc))"
 
 
 [tool.codespell]
