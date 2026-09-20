@@ -69,7 +69,7 @@ repos:
     -   id: mypy
         additional_dependencies:
         -   tokenize-rt==3.2.0
-        -   numpy>=1.21
+        -   numpy>=2.5.3
         exclude: |
             (?x)^(
                 docs/conf.py
