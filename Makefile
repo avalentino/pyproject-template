@@ -54,9 +54,11 @@ cleaner: clean
 	$(RM) -r .mypy_cache
 	$(RM) -r .ruff_cache
 	$(RM) -r .ipynb_checkpoints
+	$(RM) -r .hypothesis
 
 distclean: cleaner
 	$(RM) -r dist
+	# $(RM) -r wheelhouse
 
 lint:
 	$(PYTHON) -m flake8 --count --statistics $(TARGET) tests

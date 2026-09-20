@@ -75,6 +75,7 @@ dev = [
 
 [tool.setuptools]
 packages = ["packagename", "packagename.tests"]
+# package-dir = {"" = "src"}
 # py-modules = ["modulename"]
 # zip-safe = true
 
@@ -97,7 +98,7 @@ mypkg2 = ["py.typed", "*.pyi"]
 [tool.cibuildwheel]
 skip = "pp*"
 enable = ["cpython-freethreading"]
-test-requires = "pytest"
+test-groups = ["test"]
 test-command = "pytest -v {project}/tests"
 
 
@@ -113,6 +114,13 @@ markers = [
     # "remote_data: Apply to tests that require data from remote servers.",
     # "hugemem: mark test as using a lot of memory.",
 ]
+
+
+# [tool.coverage.run]
+# branch = true
+# core = "ctrace"
+# plugins = ["Cython.Coverage"]
+# source_pkgs = ["epr"]
 
 
 [tool.black]
