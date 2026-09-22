@@ -276,7 +276,7 @@ docstring-code-format = true
 
 [tool.ruff.lint.per-file-ignores]
 "**/{tests}/*" = ["D"]
-"**/{notebooks}/*.ipynb" = ["D","T201"]
+"**/{notebooks}/*.ipynb" = ["D", "T201"]
 "docs/conf.py" = ["D"]
 
 
