@@ -61,7 +61,7 @@ lint = ["flake8", "pydocstyle", "isort", "black", "ruff", "mypy", "codespell"]
 dev = [
     "python-build",
     "twine",
-    "setuptools >=77",
+    "setuptools >=77.0.3",
     "packaging",
     "cython >=3",
     "numpy >=2",
@@ -162,7 +162,8 @@ count = true
 quiet-level = 3
 skip = [
     "./docs/_build",
-    "./htmlcov/",
+    "./docs/spelling_wordlist.txt",
+    "./htmlcov",
     "*.pdf",
 ]
 # ignore-words="docs/spelling_wordlist.txt"
