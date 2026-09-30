@@ -44,7 +44,7 @@ repos:
         exclude: tests|examples|data|docs|setup.py
 
 -   repo: https://github.com/pycqa/isort
-    rev: 9.0.1
+    rev: 9.0.2
     hooks:
     -   id: isort
         name: isort (python)
@@ -74,6 +74,16 @@ repos:
             (?x)^(
                 docs/conf.py
             )
+
+# -   repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+#     rev: v2.16.0
+#     hooks:
+#     -   id: pretty-format-toml
+#         args: [--autofix]
+#         # toml-sort 0.25 rewrites inline tables as `{ key = value }`, which fights
+#         # uv's `{key = value}` style in uv.lock; pin it and the tomlkit parser that
+#         # 0.24 uses until that is reconciled upstream.
+#         additional_dependencies: [toml-sort==0.24.2, tomlkit==0.15.1]
 
 -   repo: https://github.com/codespell-project/codespell
     rev: v2.4.3
