@@ -235,7 +235,7 @@ extend-select = [
     "RET",      #  RET flake8-return
     # "SLF",    #  SLF flake8-self
     # "SIM",    #  SIM flake8-simplify
-    #"SLOT",    # SLOT flake8-slots
+    # "SLOT",   # SLOT flake8-slots
     # "TID",    #  TID flake8-tidy-imports
     # "TD",     #   TD flake8-todos
     # "TC",     #   TC flake8-type-checking
