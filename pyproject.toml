@@ -55,7 +55,7 @@ docs = [
     "packaging",
     "ipython",
 ]
-test = ["pytest", "packaging"]
+test = ["pytest", "pytest-doctestplus"]
 coverage = ["pytest-cov", "coverage[toml]", {include-group = "test"}]
 lint = ["flake8", "pydocstyle", "isort", "black", "ruff", "mypy", "codespell"]
 dev = [
